@@ -23,6 +23,8 @@ $tablet_width: 992px;
 $browser_width: 1200px;
 
 
+$box_shadow: 0 30px 60px transparentize($dark_grey, 0.9), 0 7px 12px  transparentize($dark_grey, 0.85);
+
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);

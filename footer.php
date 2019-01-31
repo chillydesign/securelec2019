@@ -43,6 +43,10 @@
             <div class="col-sm-6">
 
                 <h3>Nos accréditations</h3>
+                <p>
+                    <img src="<?php echo $tdu; ?>/img/eco21.png" alt="Eco 21" />
+                    <img src="<?php echo $tdu; ?>/img/sas.png" alt="SAS" />
+                </p>
             </div>
         </div>
     </div>

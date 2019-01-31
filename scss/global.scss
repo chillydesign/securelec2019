@@ -33,6 +33,52 @@ section {
 
 
 section.section_welcome {
-    background: $brand_color;
+    background: $brand_color  url('../img/header_swoosh.svg') bottom center no-repeat;
+    background-size: 100%;
+    position: relative;
+    padding-bottom: 100px;
     color: white;
+    // .container {
+    //     position: relative;
+    //     z-index: 2;
+    // }
+}
+
+// .welcome_background {
+//     background: $brand_color  url('../img/header_swoosh.svg') bottom center no-repeat;
+//     background-size: 100%;
+//     position: absolute;
+//     z-index: 1;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 500px
+// }
+#formation_securelec {
+    background: $light_green;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: $box_shadow;
+    position: relative;
+    top: -400px;
+    color: white;
+
+    h2 {
+        font-size: 2em;
+        background: url('../img/lightening.svg') top left no-repeat;
+        background-size: 30px;
+        padding-left: 38px;
+    }
+
+    .formation_picture {
+        padding: 80px 0;
+        background: green;
+        text-align:center;
+        color:white;
+        margin:0 -20px 20px;
+    }
+    a.button {
+        background-color: $dark_green;
+        display: block;
+    }
 }
