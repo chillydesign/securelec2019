@@ -1,0 +1,69 @@
+
+
+footer {
+
+    background: $dark_grey;
+    padding: 20px 0;
+    margin: 0;
+    color: $light_grey;
+
+
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 1.35em;
+        }
+
+
+    #address_column {
+        @media (min-width: $mobile_width) {
+            width: 40%
+        }
+
+
+    }
+
+    #email_column {
+        @media (min-width: $mobile_width) {
+            text-align: center;
+            width: 20%;
+        }
+    }
+
+
+    #phone_column {
+        @media (min-width: $mobile_width) {
+            text-align: right;
+            width: 40%
+        }
+    }
+
+
+
+    #copyright {
+
+
+        color: $medium_grey;
+        font-size: #{$font_size * 0.85};
+
+        @media (min-width: $mobile_width) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+        }
+    }
+
+
+    a {
+        color: white;
+        text-decoration: none;
+        &:link, &:visited, &:active {
+            color: white;
+        }
+        &:hover {
+
+        }
+    }
+}
