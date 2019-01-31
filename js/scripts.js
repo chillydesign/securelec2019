@@ -31,6 +31,25 @@
         });
 
 
+        var $arrow = $('#arrow');
+        var $person_boxes = $('.person_box')
+        $person_boxes.hide();
+        $person_boxes.first().show();
+        $('#services_for li').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var $person = $this.data('person');
+
+            $person_boxes.hide();
+            $('#' + $person).show();
+
+            var $cont_width =  $('.container').width();
+            var $screen_width = $window.width();
+            var $offset = $this.offset();
+            var $left = e.clientX - (($screen_width - $cont_width ) /2) - 20;
+            $left = Math.round($left / 20) * 20 ; // fix to grid of 20px
+            $arrow.css({ left: $left });
+        })
 
 
         // MAP

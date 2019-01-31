@@ -32,38 +32,74 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <h2>Vous êtes :</h2>
-                        <p>Quibusdam nam tamen te aute excepteur iis quid esse, ita nam esse incididunt,
-                            nostrud magna doctrina voluptate. Veniam nam mentitum. Ita minim
-                            adipisicing.Fabulas noster noster aliquip labore aut admodum te velit appellat,
-                            senserit fore voluptate mandaremus a vidisse ut singulis. Occaecat quorum
-                            senserit litteris. Et aliqua consequat. Admodum te officia id incididunt velit
-                            an singulis cohaerescant a eiusmod sed amet aliquip ut summis ad ne multos
-                            laboris.</p>
+<?php $people = array(
+'propritetaire' => 'Un particulier propritétaire',
+'entreprise' => 'Une entreprise',
+'gerance' => 'Une régie ou gérance ',
+'installateur' => 'Un installateur électrique'
+); ?>
+                        <ul id="services_for">
+                            <?php foreach ($people as $person => $description) : ?>
+                                <li data-person="<?php echo $person; ?>"  id="s_<?php echo $person; ?>"><?php echo $description; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div id="formation_securelec">
+                            <h2>Formations Securelec</h2>
+                            <div class="formation_picture">PICTURE HERE</div>
+
+                            <p>Securelec organise des formations et séminaires en sécurité électrique à destination des concierges, commis de régie ou particuliers.</p>
+
+
+                            <ul>
+                                <li>Formation continue Art 13-15</li>
+                                <li>Personnel instruit</li>
+                                <li>Sécurité au travail</li>
+                                <li>Soutien technique</li>
+                                <li>VDE 701-702</li>
+                                <li>Vérification à la mise en service</li>
+                                <li>Formation NIBT 2015</li>
+                            </ul>
+                            <p>Et bien plus encore!</p>
+                            <a href="#" class="button">Toutes nos formations</a>
                         </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+
+
+                <div id="people_boxes">
+                <div id="arrow" >&nbsp;</div>
+
+
+                <?php foreach ($people as $person => $description) : ?>
+
+                <div class="person_box" id="<?php echo $person; ?>">
+                    <div class="row">
                         <div class="col-sm-4">
-                            <div id="formation_securelec">
-                                <h2>Formations Securelec</h2>
-                                <div class="formation_picture">PICTURE HERE</div>
-
-                                <p>Securelec organise des formations et séminaires en sécurité électrique à destination des concierges, commis de régie ou particuliers.</p>
-
-
-                                <ul>
-                                    <li>Formation continue Art 13-15</li>
-                                    <li>Personnel instruit</li>
-                                    <li>Sécurité au travail</li>
-                                    <li>Soutien technique</li>
-                                    <li>VDE 701-702</li>
-                                    <li>Vérification à la mise en service</li>
-                                    <li>Formation NIBT 2015</li>
-                                </ul>
-                                <p>Et bien plus encore!</p>
-                                <a href="#" class="button">Toutes nos formations</a>
-                            </div>
-
+                            <?php echo $person; ?>
+                            <?php echo $person; ?>
+                            <?php echo $person; ?>
+                            <?php echo $person; ?>
+                            <img src="" alt="" />
+                        </div>
+                        <div class="col-sm-8">
+                            <h3>Contrôle d’inspection périodique ou vente d’un bien immobilier</h3>
+                            <p>Votre installation électrique doit subir périodiquement un contrôle. La périodicité de ce contrôle dépend des locaux où se situe l’installation électrique. Outre le contrôle périodique échu, pour les installations dont la périodicité est 10 ans ou 20 ans, lors de la vente d’un bien immobilier, un contrôle périodique est nécessaire si le dernier contrôle date de plus de cinq ans. Prenez rendez-vous avec un de nos inspecteurs certifiés qui réaliseront votre contrôle d’inspection sur les cantons de Genève et Vaud.</p>
+                            <a href="#" class="button">En savoir plus</a>
                         </div>
                     </div>
+                </div><!--  END OF grey_box -->
+            <?php endforeach; ?>
 
+</div>
                 </div>
             </section>
 
@@ -94,10 +130,6 @@
     <!-- /article -->
 
 <?php endif; ?>
-
-
-
-
 
 
 <?php get_footer(); ?>

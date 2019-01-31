@@ -12,11 +12,11 @@
 
         <?php include('section-loop.php'); ?>
 
-
-        <div class="container">
-            <?php the_content(); ?>
-        </div>
-
+        <section>
+            <div class="container">
+                <?php the_content(); ?>
+            </div>
+        </section>
 
 
     </article>

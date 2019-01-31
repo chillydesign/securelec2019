@@ -38,36 +38,66 @@ section.section_welcome {
     position: relative;
     padding-bottom: 100px;
     color: white;
-    // .container {
-    //     position: relative;
-    //     z-index: 2;
-    // }
+
 }
 
-// .welcome_background {
-//     background: $brand_color  url('../img/header_swoosh.svg') bottom center no-repeat;
-//     background-size: 100%;
-//     position: absolute;
-//     z-index: 1;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 500px
-// }
+
+#services_for {
+    margin: 0  0 30px;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    li {
+        flex: 1;
+        display: inline-block;
+        width: 25%;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        color: $brand_color;
+        padding: 60px 0 0;
+        background-repeat: no-repeat ;
+        background-position: top center;
+        background-size: 80px;
+        cursor: pointer;
+    transition: all 0.3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &#s_propritetaire { background-image: url('../img/services_for_1.svg'); }
+        &#s_entreprise { background-image: url('../img/services_for_2.svg'); }
+        &#s_gerance { background-image: url('../img/services_for_3.svg'); }
+        &#s_installateur { background-image: url('../img/services_for_4.svg'); }
+    }
+}
+
+
+$formation_offset: 460px;
 #formation_securelec {
     background: $light_green;
     padding: 20px;
     border-radius: 20px;
     box-shadow: $box_shadow;
     position: relative;
-    top: -400px;
     color: white;
+    @media (min-width: 768px) {
+        top: #{$formation_offset * -1};
+        margin-bottom: #{$formation_offset * -1};
+     }
 
     h2 {
         font-size: 2em;
         background: url('../img/lightening.svg') top left no-repeat;
         background-size: 30px;
         padding-left: 38px;
+    }
+    ul {
+        margin: 5px 0 5px 20px;
+    }
+    p,  li {
+        margin: 0;
+        padding: 0 0 5px;
     }
 
     .formation_picture {
@@ -80,5 +110,48 @@ section.section_welcome {
     a.button {
         background-color: $dark_green;
         display: block;
+        margin: 20px 0 0;
+    }
+}
+
+
+
+#people_boxes {
+    position: relative;
+    top: -80px;
+
+    $arrow_size: 40px;
+    #arrow {
+        background: $light_grey;
+        border: 2px solid $brand_color;
+        transform: rotate(45deg);
+        height: $arrow_size;
+        width: $arrow_size;
+        position: absolute;
+        top: #{    $arrow_size * -0.5};
+        left: 52px;
+        z-index: 3;
+        &:after {
+            width: $arrow_size;
+            height: $arrow_size;
+            top:0;
+            left: 0;
+            position: absolute;
+            background: $light_grey;
+            z-index: 2;
+            display: inline-block;
+            content: '';
+        }
+    }
+}
+.person_box {
+    background: $light_grey;
+    border: 2px solid $brand_color;
+    padding: 20px;
+    margin: 0 0 20px;
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }
