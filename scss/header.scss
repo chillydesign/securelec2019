@@ -1,28 +1,25 @@
 
-$header_height: 80px;
-$header_margin: 80px;
-$header_offset: #{$header_height * 0.6};
+$header_height: 130px;
+$logo_size: 50px;
 
 
-main {
-    min-height: 800px;
-    min-height: 90vh;
-    min-height: calc( 100vh - #{$header_height}  - #{$header_margin} - 100px );
-}
+
+
 
 header {
-    background: $black;
+    background: $brand_color;
     height: $header_height;
-    margin: 0 0 $header_margin;
+    margin: 0;
+    border-bottom: 2px solid transparentize(white, 0.5);
 
     a#branding {
         display: block;
         width: 300px;
-        height: $header_height;
+        height: $logo_size;
         position: relative;
-        top: 30px;
+        top: 50px;
         flex: 1 auto 0;
-        background: url('../img/logo_bw.svg') no-repeat center left;
+        background: url('../img/h1.svg') no-repeat center left;
         background-size: contain;
         text-indent: -9999px;
     }
@@ -36,127 +33,44 @@ header {
 
         ul {
             padding: 0;
-            margin: 0;
+            margin:  70px -10px 0;
             display: none;
 
             @media (min-width: $mobile_width) {
                 display: block;
             }
 
-
             li {
                 display: inline-block;
                 padding: 0;
                 margin: 0;
                 line-height: 1;
+                font-weight: bold;
                 a {
-
                     display: inline-block;
                     color: white;
                     text-decoration: none;
+                    padding: 7px 10px;
+                    margin:  0 0;
+                    position: relative;
                     &:link, &:visited, &:active {
                         color: white;
                     }
                 }
-            }
-            &#main_nav {
-                margin: 0 -10px;
-                li  {
 
-                    a {
-                        height: #{$header_height - $header_offset};
-                        padding: 0 10px 0;
-                        margin: $header_offset 0 0;
-                        position: relative;
+                &:last-child {
+                     a {
+                         background: $light_green;
+                         border-radius: 20px;
+                     }
+                }
+            } // end of li
 
-                        &:after {
-                            content: '';
-                            width: 100%;
-                            height: 0px;
-                            background: transparentize($medium_grey, 0.5);
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            transition: all 0.3s;
-                        }
-
-                        &:hover {
-                            text-shadow: 0 0 5px transparentize(white, 0.5);
-                            &:after {
-                                height: 8px;
-                                background: transparentize($brand_color, 0.5);
-                            }
-                        }
-                    }
-                    &.active {
-                        a {
-                            &:after {
-                                height: 8px;
-                            }
-                        }
-                    }
-                } // end of li
-            } // end of main nav
-
-            $social_nav_height: 20px;
-
-            &#social_nav {
-                position: absolute;
-                top: $header_height;
-                right: -5px;
-                text-transform: uppercase;
-
-                li {
-                    font-size: 1.1em;
-
-                    a {
-                        margin: 5px 2px 0;
-                        padding:0 5px;
-                        height: $social_nav_height;
-                        line-height: $social_nav_height;
-                        background: $black;
-                        font-weight: bold;
-                        &:hover {
-                            background-color: $brand_color;
-                        }
-
-                    } // end of a
-                    &.social_icon  {
-
-                        a {
-                            text-indent: -9999px;
-                            text-align: left;
-                            background-repeat: no-repeat;
-                            background-position: center center;
-                            background-size: $social_nav_height;
-                            width: $social_nav_height;
-                        }
-
-                        &.social_icon_vcard a {
-                            background-image: url('../img/vcard.svg');
-                            background-size: #{$social_nav_height * 0.7};
-                        }
-                        &.social_icon_facebook a {
-                            background-image: url('../img/facebook.svg');
-                        }
-                        &.social_icon_instagram a {
-                            background-image: url('../img/instagram.svg');
-                        }
-                        &.social_icon_pinterest a {
-                            background-image: url('../img/pinterest.svg');
-                        }
-                    }
+        } // end of ul
 
 
 
-                } // end of li
-            } // end of social nav
-
-        }
-
-
-
-    }
+    } // end of nav
 
 
 }

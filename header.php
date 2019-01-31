@@ -21,14 +21,17 @@
 
         <header>
             <div class="container">
-                <div class="column_container">
-                    <a href="<?php echo $home_url ; ?>" id="branding">Securelec</a>
-                    <nav>
-                        <ul id="main_nav">
-                            <?php chilly_nav('header_nav'); ?>
-                        </ul>
-
-                    </nav>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a href="<?php echo $home_url ; ?>" id="branding">Securelec</a>
+                    </div>
+                    <div class="col-sm-9">
+                        <nav>
+                            <ul id="main_nav">
+                                <?php chilly_nav('header_nav'); ?>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>

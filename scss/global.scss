@@ -23,6 +23,16 @@ body {
 }
 
 #map_container {
-    background: $light_grey;
     height: 300px;
+}
+
+
+section {
+    padding: 60px 0;
+}
+
+
+section.section_welcome {
+    background: $brand_color;
+    color: white;
 }

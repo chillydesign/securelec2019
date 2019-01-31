@@ -12,8 +12,15 @@ h2 {
 }
 h3 {
     font-size: #{$font_size * 1.3};
-    text-transform: uppercase;
-    padding: 0 0 5px;
+    padding: 0 0 10px;
+    color: $brand_color;
+}
+
+h5 {
+    color: $brand_color;
+    padding: 0px;
+    font-size: $font_size;
+    line-height: 150%;
 }
 
 h6  {
@@ -79,8 +86,9 @@ a {
 
 
 h6 a, a h6, a.button {
-    background: $black;
+    background: $light_green;
     color: white;
+    border-radius: 20px;
     display: block;
     padding: 10px;
     text-align: center;
@@ -88,6 +96,7 @@ h6 a, a h6, a.button {
     text-decoration: none;
     position: relative;
     overflow: hidden;
+    font-size: $font_size;
 
     @media (min-width: $mobile_width) {
         display: inline-block;
@@ -101,9 +110,7 @@ h6 a, a h6, a.button {
     &:active {
         top: 1px;
     }
-    &.gold_button {
-        @include linear-gradient(45deg, $gold, $gold_light);
-    }
+
 }
 
 
