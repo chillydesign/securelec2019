@@ -81,6 +81,7 @@ $formation_offset: 460px;
     box-shadow: $box_shadow;
     position: relative;
     color: white;
+    margin: 0 0 30px;
     @media (min-width: 768px) {
         top: #{$formation_offset * -1};
         margin-bottom: #{$formation_offset * -1};
