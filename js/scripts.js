@@ -48,6 +48,8 @@
             var $offset = $this.offset();
             var $left = e.clientX - (($screen_width - $cont_width ) /2) - 20;
             $left = Math.round($left / 20) * 20 ; // fix to grid of 20px
+            $left = Math.max($left, 20);
+            $left = Math.min($left,  $cont_width - 50 );
             $arrow.css({ left: $left });
         })
 
