@@ -24,7 +24,7 @@ h5 {
 }
 
 h6  {
-    font-size: $font_size;
+    font-size: 1em;
     font-weight: normal;
 }
 
@@ -109,6 +109,10 @@ h6 a, a h6, a.button {
     }
     &:active {
         top: 1px;
+    }
+
+    &:hover, &:active, &:link, &:visited {
+        color: white;
     }
 
 }

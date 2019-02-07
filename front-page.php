@@ -10,17 +10,18 @@
     <article id="post-<?php the_ID(); ?>" >
 
 
+        <?php $welcome_content = get_field('welcome_content'); ?>
+        <?php $sidebar_title = get_field('sidebar_title'); ?>
+        <?php $sidebar_content = get_field('sidebar_content'); ?>
+        <?php $sidebar_image = get_field('sidebar_image'); ?>
+
+
         <section class="section section_welcome">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8">
-                        <h1>Votre sécurité, notre priorité</h1>
-                        <p>Securelec est une société d’inspection des installations électriques pour les régies et les particuliers. Nous réalisons l’inspection électrique obligatoire de votre propriété mandatée par votre fournisseur d’électricité.</p>
-                        <p>Avec 17 contrôleurs dans le canton de Genève et 8 sur le canton de Vaud, tous titulaires du brevet fédéral, nous avons à coeur de vous fournir un service de qualité. Notre système de prise de rendez-vous en ligne vous permet d’effectuer les démarches en toute simplicité.</p>
-                        <a href="#" class="button">Prendre rendez-vous</a>
+                        <?php echo $welcome_content; ?>
                     </div>
-
-
                 </div>
             </div>
             <!-- <div class="welcome_background"></div> -->
@@ -33,23 +34,13 @@
 
                     <div class="col-sm-4 col-sm-push-8">
                         <div id="formation_securelec">
-                            <h2>Formations Securelec</h2>
-                            <div class="formation_picture">PICTURE HERE</div>
+                            <h2>    <?php echo $sidebar_title; ?></h2>
+                            <?php if ($sidebar_image): ?>
+                                <div class="formation_picture" style="background-image:url('<?php echo $sidebar_image['sizes']['medium']; ?>'); ">
+                                </div>
+                            <?php endif; ?>
 
-                            <p>Securelec organise des formations et séminaires en sécurité électrique à destination des concierges, commis de régie ou particuliers.</p>
-
-
-                            <ul>
-                                <li>Formation continue Art 13-15</li>
-                                <li>Personnel instruit</li>
-                                <li>Sécurité au travail</li>
-                                <li>Soutien technique</li>
-                                <li>VDE 701-702</li>
-                                <li>Vérification à la mise en service</li>
-                                <li>Formation NIBT 2015</li>
-                            </ul>
-                            <p>Et bien plus encore!</p>
-                            <a href="#" class="button">Toutes nos formations</a>
+                            <?php echo $sidebar_content; ?>
                         </div>
 
                     </div> <!-- END OF col-sm-4 -->
@@ -84,24 +75,28 @@
 
 
                     <?php foreach ($people as $person => $description) : ?>
-
-                        <div class="person_box" id="<?php echo $person; ?>">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <?php echo $person; ?>
-                                    <?php echo $person; ?>
-                                    <?php echo $person; ?>
-                                    <?php echo $person; ?>
-                                    <img src="" alt="" />
-                                </div>
-                                <div class="col-sm-8">
-                                    <h3>Contrôle d’inspection périodique ou vente d’un bien immobilier</h3>
-                                    <p>Votre installation électrique doit subir périodiquement un contrôle. La périodicité de ce contrôle dépend des locaux où se situe l’installation électrique. Outre le contrôle périodique échu, pour les installations dont la périodicité est 10 ans ou 20 ans, lors de la vente d’un bien immobilier, un contrôle périodique est nécessaire si le dernier contrôle date de plus de cinq ans. Prenez rendez-vous avec un de nos inspecteurs certifiés qui réaliseront votre contrôle d’inspection sur les cantons de Genève et Vaud.</p>
-                                    <a href="#" class="button">En savoir plus</a>
-                                </div>
-                            </div>
-                        </div><!--  END OF grey_box -->
-                    <?php endforeach; ?>
+                        <?php  $person_repeater = get_field( $person ); ?>
+                        <?php if ($person_repeater): ?>
+                            <div class="person_box" id="<?php echo $person; ?>">
+                                <?php foreach ($person_repeater as $person_box) : ?>
+                                    <?php $image = $person_box['image']; ?>
+                                    <?php $content = $person_box['content']; ?>
+                                    <div class="person_box_inner">
+                                    <div class="row" >
+                                        <div class="col-sm-4">
+                                            <?php if ($image): ?>
+                                                <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $person; ?>" />
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <?php echo $content; ?>
+                                        </div>
+                                    </div> <!--  END OF .row -->
+                                </div><!--  END OF .person_box_inner -->
+                                <?php endforeach; ?>
+                            </div><!--  END OF person_box -->
+                        <?php endif; // end of if $person_repeater ?>
+                    <?php endforeach; // end of each person ?>
 
                 </div>
             </div>

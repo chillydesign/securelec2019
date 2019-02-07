@@ -43,7 +43,7 @@ section.section_welcome {
 
 
 #services_for {
-    margin: 0  0 30px;
+    margin: 20px  0 30px;
     padding: 0;
     display: flex;
     flex-wrap: nowrap;
@@ -60,7 +60,7 @@ section.section_welcome {
         background-position: top center;
         background-size: 80px;
         cursor: pointer;
-    transition: all 0.3s;
+        transition: all 0.3s;
         &:hover {
             transform: scale(1.1);
         }
@@ -85,7 +85,7 @@ $formation_offset: 460px;
     @media (min-width: 768px) {
         top: #{$formation_offset * -1};
         margin-bottom: #{$formation_offset * -1};
-     }
+    }
 
     h2 {
         font-size: 2em;
@@ -102,13 +102,16 @@ $formation_offset: 460px;
     }
 
     .formation_picture {
-        padding: 80px 0;
-        background: green;
-        text-align:center;
-        color:white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    height: 200px;
+
         margin:0 -20px 20px;
+
     }
-    a.button {
+    a.button, h6 a, a h6 {
         background-color: $dark_green;
         display: block;
         margin: 20px 0 0;
@@ -154,5 +157,12 @@ $formation_offset: 460px;
     img {
         width: 100%;
         height: auto;
+    }
+}
+
+.person_box_inner {
+    padding: 20px 0;
+    &+.person_box_inner {
+        margin-top: 50px;
     }
 }
