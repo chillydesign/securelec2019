@@ -161,7 +161,8 @@ $formation_offset: 460px;
 }
 
 .person_box_inner {
-    padding: 20px 0;
+    position: relative;
+    z-index: 20;
     &+.person_box_inner {
         margin-top: 50px;
     }
