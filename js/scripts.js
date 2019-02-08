@@ -31,6 +31,36 @@
         });
 
 
+
+
+        //News slider
+        $(".slickslider").slick({
+
+            // normal options...
+            infinite: true,
+            autoplay: true,
+            dots: false,
+            slidesToShow: 5,
+
+            // the magic
+            responsive: [{
+
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+
+            }]
+        });
+
+
+
         var $arrow = $('#arrow');
         var $person_boxes = $('.person_box')
         $person_boxes.hide();
