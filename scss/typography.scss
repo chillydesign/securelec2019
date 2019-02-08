@@ -84,7 +84,9 @@ a {
 h5, h6  {
     font-size: 1em;
     font-weight: normal;
-    display: inline-block;
+    @media (min-width: $mobile_width) {
+            display: inline-block;
+    }
 }
 
 h6 a, a h6, a.button, h5 a , a h5 {
