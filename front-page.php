@@ -6,9 +6,6 @@
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-    <!-- article -->
-    <article id="post-<?php the_ID(); ?>" >
-
 
         <?php $welcome_content = get_field('welcome_content'); ?>
         <?php $sidebar_title = get_field('sidebar_title'); ?>
@@ -107,20 +104,15 @@
 
 
 
-    </article>
-    <!-- /article -->
 
 <?php endwhile; ?>
 
 <?php else: ?>
 
-    <!-- article -->
-    <article class="container">
+<div class="container">
 
         <h2><?php _e( 'Sorry, nothing to display.', 'webfactor' ); ?></h2>
-
-    </article>
-    <!-- /article -->
+</div>
 
 <?php endif; ?>
 
