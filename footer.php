@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-sm-6">
 
-                        <h5>Siège à Genève</h5>
+                        <h4>Siège à Genève</h4>
                         <p>Securelec SA, <br>
                         45 Av.de la Praille, <br>
                         CP 2007, 1227 Carouge <br>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-sm-6">
 
-                        <h5>Filiale Vaud</h5>
+                        <h4>Filiale Vaud</h4>
                         <p>Securelec Vaud SA, <br>
                         ch. du Suchet 5 <br>
                         CP 297, 1024 Ecublens, <br>

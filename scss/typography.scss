@@ -17,14 +17,14 @@ h3 {
     color: $brand_color;
 }
 
-h5 {
+h4 {
     color: $brand_color;
     padding: 0px;
     font-size: $font_size;
     line-height: 150%;
 }
 
-h6  {
+h5, h6  {
     font-size: 1em;
     font-weight: normal;
 }
@@ -120,6 +120,7 @@ h6 a, a h6, a.button, h5 a , a h5 {
 }
 
 h5 a , a h5 a.button_grey {
+
     background-color: $medium_grey;
     &:hover {
         background-color: $dark_grey;
