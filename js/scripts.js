@@ -13,21 +13,21 @@
 
         // mobile menu button
         var $menu_button = $('#menu_button');
-        var $nav = $('nav');
+        var $nav = $('nav ul');
         $menu_button.on('click', function(e){
             e.preventDefault();
-            $nav.toggleClass('visible');
+            $nav.toggleClass('menu_visible');
         });
 
         // if press escape key, hide menu
         $(document).on('keydown', function(e){
             if(e.keyCode == 27 ){
-                $nav.removeClass('visible');
+                $nav.removeClass('menu_visible');
             }
         })
 
         $('#main').on('click', function() {
-            $nav.removeClass('visible');
+            $nav.removeClass('menu_visible');
         });
 
 

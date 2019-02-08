@@ -48,27 +48,35 @@ header {
 
     }
 
+    $nav_width: 300px;
+
     nav {
 
         color: white;
-        text-align: right;
         position: relative;
 
-        ul {
+        ul#main_nav {
             padding: 0;
             position: fixed;
+            transition: all 0.3s;
             z-index: 1000;
-            top:0;
+            top:$header_height;
             right: 0;
             height: 100vh;
-            width: 300px;
+            width: $nav_width;
             overflow: scroll;
             background: $dark_grey;
             margin: 0;
+            transform: translateX(#{$nav_width });
+
+            &.menu_visible {
+                transform: translateX(0);
+            }
 
 
             // MENU FOR DESKTOP
             @media (min-width: 768px) {
+                    transform: translateX(0);
                 display: block;
                 margin:  70px -10px 0;
                 position: static;
@@ -76,13 +84,15 @@ header {
                 width: auto;
                 background: none;
                 overflow: visible;
+                text-align: right;
+
             }
 
 
 
             li {
                 display: block;
-                padding: 0 0 28px;
+                padding: 0 0 ;
                 margin: 0;
                 line-height: 1;
                 font-weight: bold;
@@ -98,72 +108,97 @@ header {
                     display: block;
                     color: white;
                     text-decoration: none;
-                    padding: 7px 10px;
+                    padding: 15px 20px;
                     margin:  0 0;
                     position: relative;
                     &:link, &:visited, &:active {
                         color: white;
                     }
 
+                    &:hover {
+                        background:  darken($dark_green, 10);
+                    }
+
                     @media (min-width: 768px) {
+                        padding: 7px 10px 33px;
                         display: inline-block;
                     }
                 }
 
                 &:last-child {
 
-                    &:hover {
-                        background: none;
-                    }
+
                     a {
                         background: $light_green;
-                        border-radius: 20px;
 
-                        &:hover {
-                            background-color: lighten($light_green, 4);
-                            transform: scale(1.1);
+                        @media (min-width: 768px) {
+                            border-radius: 20px;
+                            padding: 7px 10px;
+                            &:hover {
+                                background-color: lighten($light_green, 4);
+                                transform: scale(1.1);
+                            }
                         }
+
+
                     }
                 }
 
 
                 &:hover {
-                    background:  darken($dark_green, 10);
+
                     ul.sub-menu {
                         display: block;
                     }
                 }
                 ul.sub-menu {
-                    animation: fadeInFromTop 0.5s;
-                    display: none;
-                    position: absolute;
-                    top: -20px;
-                    right: 10px;
-                    z-index: 30;
-                    text-align: right;
-                    width: 300px;
+
+                    margin: 0;
+                    padding: 0;
+
+
+
+
+                    @media (min-width: 768px) {
+                        animation: fadeInFromTop 0.5s;
+                        display: none;
+                        position: absolute;
+                        top: 40px;
+                        right: 0px;
+                        z-index: 30;
+                        text-align: right;
+                        width: 300px;
+
+                    }
+
 
                     li {
                         display: block;
                         font-size: 1em;
                         padding: 0;
                         margin: 0;
-                        background:  darken($dark_green, 10);
-                        border-top: 1px solid darken($dark_green, 7);
-                        border-bottom:  1px solid darken($dark_green, 13);
-                        &:hover {
+
+                        @media (min-width: 768px) {
                             background:  darken($dark_green, 10);
+                            border-top: 1px solid darken($dark_green, 7);
+                            border-bottom:  1px solid darken($dark_green, 13);
                         }
+
+
                         a {
                             background: none;
-                            padding: 10px;
+
                             display: block;
                             border-radius: 0;
-
-                            &:hover {
-                                background: darken($dark_green, 6);
-                                transform: none;
+                            @media (min-width: 768px) {
+                                padding: 10px;
+                                &:hover {
+                                    background: darken($dark_green, 6);
+                                    transform: none;
+                                }
                             }
+
+
 
                         }
                     }
