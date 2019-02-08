@@ -185,8 +185,14 @@ $formation_offset: 460px;
     .page_link {
         flex: 1 auto;
         text-align: center;
-        width: 33.3%;
+        width: 50%;
         margin: 0 0 40px;
+
+
+        @media (min-width: 768px) {
+                width: 33.3%;
+        }
+
 
         a {
             font-size: 1.6em;
@@ -205,8 +211,8 @@ $formation_offset: 460px;
         }
         .page_link_image {
             transition: all 0.3s;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             margin: 0 0 20px;
             display: inline-block;
             background-color: $light_grey;
@@ -214,6 +220,11 @@ $formation_offset: 460px;
             background-position: center center;
             background-size: cover;
             border-radius: 50%;
+
+            @media (min-width: 768px) {
+                width: 200px;
+                height: 200px;
+            }
 
         }
     }
