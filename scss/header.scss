@@ -63,7 +63,7 @@ header {
                 &:last-child {
 
                     &:hover {
-                            background: none;
+                        background: none;
                     }
                     a {
                         background: $light_green;
@@ -101,7 +101,9 @@ header {
                         background:  darken($dark_green, 10);
                         border-top: 1px solid darken($dark_green, 7);
                         border-bottom:  1px solid darken($dark_green, 13);
-
+                        &:hover {
+                            background:  darken($dark_green, 10);
+                        }
                         a {
                             background: none;
                             padding: 10px;
