@@ -249,3 +249,13 @@ $formation_offset: 460px;
     background: $pale_green;
     padding: 50px 0 ;
 }
+
+
+.slickslider {
+    li {
+        img {
+            height: 300px;
+            width: auto;
+        }
+    }
+}
