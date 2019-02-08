@@ -3,7 +3,8 @@ $header_height: 130px;
 $logo_size: 50px;
 
 
-
+@media (min-width: 768px) {
+}
 
 header {
     background: $brand_color;
@@ -89,7 +90,7 @@ header {
                     top: -20px;
                     right: 10px;
                     z-index: 30;
-                    text-align: left;
+                    text-align: right;
                     width: 300px;
 
                     li {
