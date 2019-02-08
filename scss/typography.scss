@@ -93,7 +93,7 @@ h6 a, a h6, a.button {
     display: block;
     padding: 10px;
     text-align: center;
-    margin:  0;
+    margin:  0 0 10px;
     text-decoration: none;
     position: relative;
     overflow: hidden;
@@ -102,6 +102,7 @@ h6 a, a h6, a.button {
     @media (min-width: $mobile_width) {
         display: inline-block;
         padding: 10px 50px;
+        margin: 0;
     }
 
     &:hover {
@@ -116,6 +117,13 @@ h6 a, a h6, a.button {
         color: white;
     }
 
+}
+
+h5 a , a h5 a.button_grey {
+    background-color: $medium_grey;
+    &:hover {
+        background-color: $dark_grey;
+    }
 }
 
 
