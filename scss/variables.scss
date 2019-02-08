@@ -30,3 +30,8 @@ $box_shadow: 0 30px 60px transparentize($dark_grey, 0.9), 0 7px 12px  transparen
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
 }
+
+@keyframes fadeInFromTop {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}

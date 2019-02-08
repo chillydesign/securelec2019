@@ -5,7 +5,6 @@ $logo_size: 50px;
 
 
 
-
 header {
     background: $brand_color;
     height: $header_height;
@@ -42,10 +41,12 @@ header {
 
             li {
                 display: inline-block;
-                padding: 0;
+                padding: 0 0 28px;
                 margin: 0;
                 line-height: 1;
                 font-weight: bold;
+                position: relative;
+                transition: all 0.3s;
                 a {
                     display: inline-block;
                     color: white;
@@ -59,10 +60,60 @@ header {
                 }
 
                 &:last-child {
-                     a {
-                         background: $light_green;
-                         border-radius: 20px;
-                     }
+
+                    &:hover {
+                            background: none;
+                    }
+                    a {
+                        background: $light_green;
+                        border-radius: 20px;
+
+                        &:hover {
+                            background-color: lighten($light_green, 4);
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+
+                &:hover {
+                    background:  darken($dark_green, 10);
+                    ul.sub-menu {
+                        display: block;
+                    }
+                }
+                ul.sub-menu {
+                    animation: fadeInFromTop 0.5s;
+                    display: none;
+                    position: absolute;
+                    top: -20px;
+                    right: 10px;
+                    z-index: 30;
+                    text-align: left;
+                    width: 300px;
+
+                    li {
+                        display: block;
+                        font-size: 1em;
+                        padding: 0;
+                        margin: 0;
+                        background:  darken($dark_green, 10);
+                        border-top: 1px solid darken($dark_green, 7);
+                        border-bottom:  1px solid darken($dark_green, 13);
+
+                        a {
+                            background: none;
+                            padding: 10px;
+                            display: block;
+                            border-radius: 0;
+
+                            &:hover {
+                                background: darken($dark_green, 6);
+                                transform: none;
+                            }
+
+                        }
+                    }
                 }
             } // end of li
 
