@@ -29,6 +29,8 @@ header {
     background: $brand_color;
     height: $header_height;
     margin: 0;
+    position: relative;
+    z-index: 100;
     border-bottom: 2px solid transparentize(white, 0.5);
 
     a#branding {
