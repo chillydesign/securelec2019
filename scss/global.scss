@@ -179,15 +179,17 @@ $formation_offset: 460px;
 
 .page_links {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
 
     .page_link {
         flex: 1 auto;
         text-align: center;
+        width: 33.3%;
+        margin: 0 0 40px;
 
         a {
-            font-size: 2em;
+            font-size: 1.6em;
             font-weight: bold;
             display: block;
             text-transform: uppercase;
