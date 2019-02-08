@@ -39,6 +39,7 @@
             // normal options...
             infinite: true,
             autoplay: true,
+             variableWidth: true,
             dots: false,
             // slidesToShow: 3,
 
