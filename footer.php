@@ -59,7 +59,7 @@
 
 
 
-<!-- <script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU&#038;ver=4.8.1'></script> -->
+<script type='text/javascript' src='//maps.google.com/maps/api/js?key=AIzaSyAxQfqRqtPLAW4BolFMCxTiv9y--R8CXdU&#038;ver=4.8.1'></script>
 <?php wp_footer(); ?>
 
 

@@ -536,8 +536,8 @@ function chilly_map( $atts, $content = null ) {
 
     $attributes = shortcode_atts( array(
         'title' => "Securelec",
-        'lat' => 46.2041742,
-        'lng' => 6.1334691,
+        'lat' => 45,
+        'lng' => 6,
     ), $atts );
 
 
@@ -594,23 +594,23 @@ add_action( 'after_setup_theme', 'remove_json_api' );
 
 
 
-// function count_to_bootstrap_class($count){
-//
-//     if ($count == 1) {
-//         $class = 'col-sm-12';
-//     } elseif ($count == 2) {
-//         $class = 'col-sm-6';
-//     } elseif ($count == 3) {
-//         $class = 'col-sm-4';
-//     } elseif ($count == 4) {
-//         $class = 'col-sm-3 col-xs-6';
-//     } elseif ($count <= 6 ) {
-//         $class = 'col-sm-2';
-//     } else {
-//         $class = 'col-sm-1';
-//     }
-//     return $class;
-// };
+function count_to_bootstrap_class($count){
+
+    if ($count == 1) {
+        $class = 'col-sm-12';
+    } elseif ($count == 2) {
+        $class = 'col-sm-6';
+    } elseif ($count == 3) {
+        $class = 'col-sm-4';
+    } elseif ($count == 4) {
+        $class = 'col-sm-3 col-xs-6';
+    } elseif ($count <= 6 ) {
+        $class = 'col-sm-2';
+    } else {
+        $class = 'col-sm-1';
+    }
+    return $class;
+};
 
 function thumbnail_of_post_url( $post_id,  $size='large'  ) {
 
