@@ -28,7 +28,7 @@ body {
 
 
 section {
-    padding: 60px 0;
+    padding: 60px 0 30px;
 }
 
 
@@ -96,6 +96,7 @@ $formation_offset: 460px;
         background: url('../img/lightening.svg') top left no-repeat;
         background-size: 30px;
         padding-left: 38px;
+        color: white;
     }
     ul {
         margin: 5px 0 5px 20px;
@@ -126,7 +127,7 @@ $formation_offset: 460px;
 
 #people_boxes {
     position: relative;
-    top: -80px;
+    top: -70px;
 
     $arrow_size: 40px;
     #arrow {
