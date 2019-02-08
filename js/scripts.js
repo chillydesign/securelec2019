@@ -40,21 +40,21 @@
             infinite: true,
             autoplay: true,
             dots: false,
-            slidesToShow: 3,
+            // slidesToShow: 3,
 
             // the magic
             responsive: [{
 
                 breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                }
+                // settings: {
+                //     slidesToShow: 2,
+                // }
 
             }, {
                 breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
+                // settings: {
+                //     slidesToShow: 1
+                // }
 
             }]
         });
