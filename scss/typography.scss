@@ -24,10 +24,6 @@ h4 {
     line-height: 150%;
 }
 
-h5, h6  {
-    font-size: 1em;
-    font-weight: normal;
-}
 
 
 p {
@@ -84,7 +80,12 @@ a {
 }
 
 
-
+// used as buttons
+h5, h6  {
+    font-size: 1em;
+    font-weight: normal;
+    display: inline-block;
+}
 
 h6 a, a h6, a.button, h5 a , a h5 {
     background: $light_green;
