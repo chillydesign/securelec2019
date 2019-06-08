@@ -22,10 +22,10 @@
         <header>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <a href="<?php echo $home_url ; ?>" id="branding">Securelec</a>
                     </div>
-                    <div class="col-sm-9">
+                    <div class="col-sm-10">
                         <nav>
                             <ul id="main_nav">
                                 <?php chilly_nav('header_nav'); ?>

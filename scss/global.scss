@@ -33,7 +33,7 @@ section {
 
 
 section.section_welcome {
-    background: $brand_color  url('../img/header_swoosh.svg') bottom center no-repeat;
+    background: $brand_color  url('../img/header_swoosh.svg') bottom -1px center no-repeat;
     background-size: 100%;
     position: relative;
     padding-bottom: 100px;
