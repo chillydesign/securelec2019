@@ -127,24 +127,21 @@ header {
                     }
                 }
 
-                &:last-child {
-
-
+                &.prendre_rendez {
+                    
+                    @media (min-width: 768px) {
+                        position: absolute;
+                        top: -44px;
+                        right: 0;
+                    }
                     a {
                         background: $light_green;
-
-                        @media (min-width: 768px) {
-                          position: relative;
-                          top: -107px;
-                            border-radius: 20px;
-                            padding: 7px 10px;
-                            &:hover {
-                                background-color: lighten($light_green, 4);
-                                transform: scale(1.1);
-                            }
+                        border-radius: 20px;
+                        padding: 7px 10px;
+                        &:hover {
+                            background-color: lighten($light_green, 4);
+                            transform: scale(1.1);
                         }
-
-
                     }
                 }
 
