@@ -74,7 +74,7 @@ header {
             bottom: 0; 
             // height: 100vh;
             width: $nav_width;
-            overflow: scroll;
+            // overflow: scroll;
             background: $dark_grey;
             margin: 0;
             transform: translateX(#{$nav_width });
@@ -212,6 +212,17 @@ header {
 
                         }
                     }
+                }
+
+
+                &.hide_sub_on_mob {
+                    @media (max-width: $width_for_mobile_menu) {
+                        ul {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+                   
                 }
             } // end of li
 
