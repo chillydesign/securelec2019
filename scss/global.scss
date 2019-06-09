@@ -20,6 +20,18 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    &.dont_scroll {
+        main#main {
+            position: fixed;
+        }
+        footer {
+            display: none;
+        }
+        nav {
+            overflow-y:scroll 
+        } 
+    }
+
 }
 
 #map_container {

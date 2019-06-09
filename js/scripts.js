@@ -35,9 +35,9 @@
         
         function toggleBodyScroll(){
             if ($nav.hasClass('menu_visible')) {
-                $('#dont_scroll').show();
+                $body.addClass('dont_scroll');
             } else {
-                $('#dont_scroll').hide();
+                $body.removeClass('dont_scroll');
             }
         }
         
