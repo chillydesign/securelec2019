@@ -37,4 +37,6 @@
             <div id="menu_button">Menu</div>
         </header>
 
+        <div id="dont_scroll"></div>
+
         <main id="main">
